@@ -1,0 +1,158 @@
+:root {
+    /* Primary Color - Zomato Red */
+    --primary-color: #E23744;
+    --primary-color-light: #FF5A5F;
+    --primary-color-dark: #CB202D;
+    --primary-color-rgb: 226, 55, 68;
+    
+    /* Background Colors */
+    --bg-dark: #FFFFFF;
+    --bg-section: #F4F4F5;
+    --bg-card: #FFFFFF;
+    
+    /* Text Colors */
+    --text-white: #FFFFFF;
+    --text-dark: #1C1C1C;
+    --text-muted: #696969;
+    --text-gray: #4A4A4A;
+    
+    /* Other Colors */
+    --border-color: #E8E8E8;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --overlay-dark: rgba(0, 0, 0, 0.6);
+    --success-green: #60B246;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #fff0f0, #ffccd0, var(--primary-color-light));
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    max-width: 700px;
+    margin: auto;
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+}
+
+img {
+    width: 250px;
+    margin-bottom: 20px;
+    animation: bounce 1.4s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.home-btn {
+    background: var(--primary-color);
+    color: var(--text-white);
+    padding: 15px 25px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.home-btn:hover {
+    background: var(--primary-color-dark);
+}
+
+/* ========== MOBILE (up to 480px) ========== */
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+    
+    .box {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+    
+    img {
+        width: 200px;
+    }
+    
+    .home-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+/* ========== TABLET (481px to 768px) ========== */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 30px;
+    }
+    
+    .box {
+        padding: 35px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    img {
+        width: 220px;
+    }
+}
+
+/* ========== DESKTOP (769px and above) ========== */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    img {
+        width: 280px;
+    }
+}

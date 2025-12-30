@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/* =============================================
+   CSS VARIABLES - ZOMATO/SWIGGY THEME
+   ============================================= */
+:root {
+    --primary-color: #E23744;
+    --primary-color-light: #FF5A5F;
+    --primary-color-dark: #CB202D;
+    --bg-dark: #F4F4F5;
+    --bg-section: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --text-white: #FFFFFF;
+    --text-dark: #1C1C1C;
+    --text-muted: #696969;
+    --text-gray: #4A4A4A;
+    --border-color: #E8E8E8;
+    --success-green: #60B246;
+    --error-red: #E23744;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Auth Container */
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.auth-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-color-light));
+}
+
+/* Auth Header */
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header i {
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.auth-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.auth-header p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Error Message */
+.error-message {
+    background: rgba(226, 55, 68, 0.1);
+    border: 1px solid rgba(226, 55, 68, 0.3);
+    color: var(--error-red);
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    background: var(--bg-dark);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--bg-section);
+    box-shadow: 0 0 0 4px rgba(226, 55, 68, 0.1);
+}
+
+/* Primary Button */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(226, 55, 68, 0.3);
+}
+
+/* Footer Links */
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.auth-footer a:hover {
+    color: var(--primary-color-dark);
+}
+
+/* Back Link */
+.back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-box {
+        padding: 30px 20px;
+    }
+    
+    .auth-header h2 {
+        font-size: 24px;
+    }
+}
